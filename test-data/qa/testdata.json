@@ -1,0 +1,7 @@
+{
+    "testData" : {                                                                            
+      "DataSet1": { "username": "Admin",     "password": "admin123","expectSuccess": true  },                                              
+      "DataSet2": { "username": "wrongUser", "password": "admin123","expectSuccess": false },                                              
+      "DataSet3": { "username": "Admin",     "password": "wrongPass",  "expectSuccess": false }                                                
+    }
+}

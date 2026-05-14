@@ -1,0 +1,11 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="7.10344299999997">
+<testsuite name="6-API Testing and Mocking\11_Mock_From_HAR_File.spec.ts" timestamp="2026-05-12T01:10:15.023Z" hostname="Google Chrome" tests="1" failures="0" skipped="0" time="1.164" errors="0">
+<testcase name="Mock API from HAR file in Playwright" classname="6-API Testing and Mocking\11_Mock_From_HAR_File.spec.ts" time="1.164">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\6-API Testing and Mocking--e3836-from-HAR-file-in-Playwright-Google-Chrome\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

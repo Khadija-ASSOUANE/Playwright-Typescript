@@ -1,0 +1,138 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\XWZ\\Desktop\\Projects\\Playwright-Typescript-New\\playwright.config.ts",
+    "rootDir": "C:/Users/XWZ/Desktop/Projects/Playwright-Typescript-New/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/XWZ/Desktop/Projects/Playwright-Typescript-New/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "Google Chrome",
+        "name": "Google Chrome",
+        "testDir": "C:/Users/XWZ/Desktop/Projects/Playwright-Typescript-New/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "json-test-report.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "junit-test-report.xml"
+        }
+      ],
+      [
+        "C:\\Users\\XWZ\\Desktop\\Projects\\Playwright-Typescript-New\\node_modules\\allure-playwright\\dist\\cjs\\index.js",
+        null
+      ],
+      [
+        "C:\\Users\\XWZ\\Desktop\\Projects\\Playwright-Typescript-New\\src\\utils\\LastRunReporter.ts",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "runAgents": "none",
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "3way",
+    "version": "1.58.2",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "6-API Testing and Mocking\\11_Mock_From_HAR_File.spec.ts",
+      "file": "6-API Testing and Mocking/11_Mock_From_HAR_File.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Mock API from HAR file in Playwright",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Google Chrome",
+              "projectName": "Google Chrome",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1164,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-12T01:10:17.145Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\XWZ\\Desktop\\Projects\\Playwright-Typescript-New\\test-results\\6-API Testing and Mocking--e3836-from-HAR-file-in-Playwright-Google-Chrome\\test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ead815a5dc649c8fcd25-838998b54c2ceba77deb",
+          "file": "6-API Testing and Mocking/11_Mock_From_HAR_File.spec.ts",
+          "line": 16,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-05-12T01:10:12.688Z",
+    "duration": 7103.44299999997,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

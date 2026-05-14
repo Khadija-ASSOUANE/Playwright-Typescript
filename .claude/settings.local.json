@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Rename-Item *)",
+      "mcp__ide__getDiagnostics"
+    ]
+  }
+}
