@@ -12,7 +12,7 @@
 
 import { test, expect } from '@playwright/test';
 
-test('test', async ({ page }) => {
+test('test1',{tag:['@PlaywrightWithJenkins']} ,async ({ page }) => {
   await page.goto('https://www.google.com/?zx=1778113574381');
   await page.getByRole('combobox', { name: 'Search' }).click();
   await page.getByRole('combobox', { name: 'Search' }).fill('orangehrmlive');
@@ -24,4 +24,18 @@ test('test', async ({ page }) => {
   await expect(page.getByText('Username', { exact: true })).toBeVisible();
   await expect(page.getByText('Password', { exact: true })).toBeVisible();
   await expect(page.getByRole('heading')).toContainText('Login');
+});
+
+test('test2 should fail',{tag:['@PlaywrightWithJenkins']} ,async ({ page }) => {
+  await page.goto('https://www.google.com/?zx=1778113574381');
+  await page.getByRole('combobox', { name: 'Search' }).click();
+  await page.getByRole('combobox', { name: 'Search' }).fill('orangehrmlive');
+  await page.getByLabel('Search', { exact: true }).press('Enter');
+   // Click on link
+    await page.getByRole('link', { name: 'OrangeHRM' }).first().click();
+  //await page.getByRole('link', { name: 'OrangeHRM OrangeHRM https://' }).click();
+  await expect(page.getByRole('heading', { name: 'Login' })).toBeVisible();
+  await expect(page.getByText('Username', { exact: true })).toBeVisible();
+  await expect(page.getByText('Password', { exact: true })).toBeVisible();
+  await expect(page.getByRole('heading')).toContainText('Dash');
 });

@@ -1,9 +1,49 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="7.10344299999997">
-<testsuite name="6-API Testing and Mocking\11_Mock_From_HAR_File.spec.ts" timestamp="2026-05-12T01:10:15.023Z" hostname="Google Chrome" tests="1" failures="0" skipped="0" time="1.164" errors="0">
-<testcase name="Mock API from HAR file in Playwright" classname="6-API Testing and Mocking\11_Mock_From_HAR_File.spec.ts" time="1.164">
+<testsuites id="" name="" tests="2" failures="1" skipped="0" errors="0" time="75.16594599999999">
+<testsuite name="1-Basics\4_Codegen_Test.spec.ts" timestamp="2026-05-17T13:53:52.613Z" hostname="Google Chrome" tests="2" failures="1" skipped="0" time="69.775" errors="0">
+<testcase name="test1" classname="1-Basics\4_Codegen_Test.spec.ts" time="20.077">
 <system-out>
 <![CDATA[
-[[ATTACHMENT|test-results\6-API Testing and Mocking--e3836-from-HAR-file-in-Playwright-Google-Chrome\test-finished-1.png]]
+[[ATTACHMENT|test-results\1-Basics-4_Codegen_Test-test1-Google-Chrome\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="test2 should fail" classname="1-Basics\4_Codegen_Test.spec.ts" time="49.698">
+<failure message="4_Codegen_Test.spec.ts:29:5 test2 should fail" type="FAILURE">
+<![CDATA[  [Google Chrome] › 1-Basics\4_Codegen_Test.spec.ts:29:5 › test2 should fail @PlaywrightWithJenkins 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('heading')
+    Expected substring: "Dash"
+    Received string:    "Login"
+    Timeout: 30000ms
+
+    Call log:
+      - Expect "toContainText" with timeout 30000ms
+      - waiting for getByRole('heading')
+        33 × locator resolved to <h5 data-v-7b563373="" data-v-0af708be="" class="oxd-text oxd-text--h5 orangehrm-login-title">Login</h5>
+           - unexpected value "Login"
+
+
+      38 |   await expect(page.getByText('Username', { exact: true })).toBeVisible();
+      39 |   await expect(page.getByText('Password', { exact: true })).toBeVisible();
+    > 40 |   await expect(page.getByRole('heading')).toContainText('Dash');
+         |                                           ^
+      41 | });
+        at C:\Users\XWZ\Desktop\Projects\Playwright-Typescript-New\tests\1-Basics\4_Codegen_Test.spec.ts:40:43
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\1-Basics-4_Codegen_Test-test2-should-fail-Google-Chrome\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\1-Basics-4_Codegen_Test-test2-should-fail-Google-Chrome\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\1-Basics-4_Codegen_Test-test2-should-fail-Google-Chrome\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\1-Basics-4_Codegen_Test-test2-should-fail-Google-Chrome\error-context.md]]
 ]]>
 </system-out>
 </testcase>

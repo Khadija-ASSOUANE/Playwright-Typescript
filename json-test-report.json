@@ -78,15 +78,17 @@
   },
   "suites": [
     {
-      "title": "6-API Testing and Mocking\\11_Mock_From_HAR_File.spec.ts",
-      "file": "6-API Testing and Mocking/11_Mock_From_HAR_File.spec.ts",
+      "title": "1-Basics\\4_Codegen_Test.spec.ts",
+      "file": "1-Basics/4_Codegen_Test.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Mock API from HAR file in Playwright",
+          "title": "test1",
           "ok": true,
-          "tags": [],
+          "tags": [
+            "PlaywrightWithJenkins"
+          ],
           "tests": [
             {
               "timeout": 60000,
@@ -96,21 +98,21 @@
               "projectName": "Google Chrome",
               "results": [
                 {
-                  "workerIndex": 12,
+                  "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1164,
+                  "duration": 20077,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-05-12T01:10:17.145Z",
+                  "startTime": "2026-05-17T13:53:54.494Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "C:\\Users\\XWZ\\Desktop\\Projects\\Playwright-Typescript-New\\test-results\\6-API Testing and Mocking--e3836-from-HAR-file-in-Playwright-Google-Chrome\\test-finished-1.png"
+                      "path": "C:\\Users\\XWZ\\Desktop\\Projects\\Playwright-Typescript-New\\test-results\\1-Basics-4_Codegen_Test-test1-Google-Chrome\\test-finished-1.png"
                     }
                   ]
                 }
@@ -118,9 +120,80 @@
               "status": "expected"
             }
           ],
-          "id": "ead815a5dc649c8fcd25-838998b54c2ceba77deb",
-          "file": "6-API Testing and Mocking/11_Mock_From_HAR_File.spec.ts",
-          "line": 16,
+          "id": "446dac330e6e349a26af-5551a4ab9f538c3d857f",
+          "file": "1-Basics/4_Codegen_Test.spec.ts",
+          "line": 15,
+          "column": 5
+        },
+        {
+          "title": "test2 should fail",
+          "ok": false,
+          "tags": [
+            "PlaywrightWithJenkins"
+          ],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Google Chrome",
+              "projectName": "Google Chrome",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 49698,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading')\nExpected substring: \u001b[32m\"Dash\"\u001b[39m\nReceived string:    \u001b[31m\"Login\"\u001b[39m\nTimeout: 30000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading')\u001b[22m\n\u001b[2m    33 × locator resolved to <h5 data-v-7b563373=\"\" data-v-0af708be=\"\" class=\"oxd-text oxd-text--h5 orangehrm-login-title\">Login</h5>\u001b[22m\n\u001b[2m       - unexpected value \"Login\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading')\nExpected substring: \u001b[32m\"Dash\"\u001b[39m\nReceived string:    \u001b[31m\"Login\"\u001b[39m\nTimeout: 30000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading')\u001b[22m\n\u001b[2m    33 × locator resolved to <h5 data-v-7b563373=\"\" data-v-0af708be=\"\" class=\"oxd-text oxd-text--h5 orangehrm-login-title\">Login</h5>\u001b[22m\n\u001b[2m       - unexpected value \"Login\"\u001b[22m\n\n    at C:\\Users\\XWZ\\Desktop\\Projects\\Playwright-Typescript-New\\tests\\1-Basics\\4_Codegen_Test.spec.ts:40:43",
+                    "location": {
+                      "file": "C:\\Users\\XWZ\\Desktop\\Projects\\Playwright-Typescript-New\\tests\\1-Basics\\4_Codegen_Test.spec.ts",
+                      "column": 43,
+                      "line": 40
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 38 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[32m'Username'\u001b[39m\u001b[33m,\u001b[39m { exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 39 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[32m'Password'\u001b[39m\u001b[33m,\u001b[39m { exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 40 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'heading'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Dash'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 41 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\XWZ\\Desktop\\Projects\\Playwright-Typescript-New\\tests\\1-Basics\\4_Codegen_Test.spec.ts",
+                        "column": 43,
+                        "line": 40
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading')\nExpected substring: \u001b[32m\"Dash\"\u001b[39m\nReceived string:    \u001b[31m\"Login\"\u001b[39m\nTimeout: 30000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading')\u001b[22m\n\u001b[2m    33 × locator resolved to <h5 data-v-7b563373=\"\" data-v-0af708be=\"\" class=\"oxd-text oxd-text--h5 orangehrm-login-title\">Login</h5>\u001b[22m\n\u001b[2m       - unexpected value \"Login\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 38 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[32m'Username'\u001b[39m\u001b[33m,\u001b[39m { exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 39 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[32m'Password'\u001b[39m\u001b[33m,\u001b[39m { exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 40 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'heading'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Dash'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 41 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\XWZ\\Desktop\\Projects\\Playwright-Typescript-New\\tests\\1-Basics\\4_Codegen_Test.spec.ts:40:43\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-17T13:54:15.847Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\XWZ\\Desktop\\Projects\\Playwright-Typescript-New\\test-results\\1-Basics-4_Codegen_Test-test2-should-fail-Google-Chrome\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\XWZ\\Desktop\\Projects\\Playwright-Typescript-New\\test-results\\1-Basics-4_Codegen_Test-test2-should-fail-Google-Chrome\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\XWZ\\Desktop\\Projects\\Playwright-Typescript-New\\tests\\1-Basics\\4_Codegen_Test.spec.ts",
+                    "column": 43,
+                    "line": 40
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "446dac330e6e349a26af-4814d263397a8a6992f4",
+          "file": "1-Basics/4_Codegen_Test.spec.ts",
+          "line": 29,
           "column": 5
         }
       ]
@@ -128,11 +201,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-05-12T01:10:12.688Z",
-    "duration": 7103.44299999997,
+    "startTime": "2026-05-17T13:53:50.605Z",
+    "duration": 75165.946,
     "expected": 1,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }
