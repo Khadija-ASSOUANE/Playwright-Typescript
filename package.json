@@ -9,7 +9,7 @@
   "description": "",
   "devDependencies": {
     "@faker-js/faker": "^10.4.0",
-    "@playwright/test": "^1.58.2",
+    "@playwright/test": "^1.60.0",
     "@types/node": "^25.5.0",
     "allure-playwright": "^3.7.2"
   },

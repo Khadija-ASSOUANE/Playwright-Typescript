@@ -1,42 +1,81 @@
-<testsuites id="" name="" tests="2" failures="1" skipped="0" errors="0" time="75.16594599999999">
-<testsuite name="1-Basics\4_Codegen_Test.spec.ts" timestamp="2026-05-17T13:53:52.613Z" hostname="Google Chrome" tests="2" failures="1" skipped="0" time="69.775" errors="0">
-<testcase name="test1" classname="1-Basics\4_Codegen_Test.spec.ts" time="20.077">
+<testsuites id="" name="" tests="3" failures="2" skipped="0" errors="0" time="53.251587">
+<testsuite name="1-Basics\4_Codegen_Test.spec.ts" timestamp="2026-05-17T14:06:35.268Z" hostname="Google Chrome" tests="2" failures="2" skipped="0" time="96.861" errors="0">
+<testcase name="test1" classname="1-Basics\4_Codegen_Test.spec.ts" time="48.12">
+<failure message="4_Codegen_Test.spec.ts:15:5 test1" type="FAILURE">
+<![CDATA[  [Google Chrome] › 1-Basics\4_Codegen_Test.spec.ts:15:5 › test1 @PlaywrightWithJenkins ────────────
+
+    TimeoutError: locator.click: Timeout 45000ms exceeded.
+    Call log:
+      - waiting for getByRole('link', { name: 'OrangeHRM' }).first()
+        - waiting for" https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3Dorangehrmlive%26sca_esv%3D3beb6debb3df5d06%26source%3Dhp%26ei%3DcMsJarukBZak0PEP36G92Ao%26iflsig%3DAFdpzrgAAAAAagnZgKvO…" navigation to finish...
+        - navigated to "https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3Dorangehrmlive%26sca_esv%3D3beb6debb3df5d06%26source%3Dhp%26ei%3DcMsJarukBZak0PEP36G92Ao%26iflsig%3DAFdpzrgAAAAAagnZgKvO…"
+
+
+      19 |   await page.getByLabel('Search', { exact: true }).press('Enter');
+      20 |    // Click on link
+    > 21 |     await page.getByRole('link', { name: 'OrangeHRM' }).first().click();
+         |                                                                 ^
+      22 |   //await page.getByRole('link', { name: 'OrangeHRM OrangeHRM https://' }).click();
+      23 |   await expect(page.getByRole('heading', { name: 'Login' })).toBeVisible();
+      24 |   await expect(page.getByText('Username', { exact: true })).toBeVisible();
+        at C:\Users\XWZ\Desktop\Projects\Playwright-Typescript-New\tests\1-Basics\4_Codegen_Test.spec.ts:21:65
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\1-Basics-4_Codegen_Test-test1-Google-Chrome\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\1-Basics-4_Codegen_Test-test1-Google-Chrome\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\1-Basics-4_Codegen_Test-test1-Google-Chrome\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\1-Basics-4_Codegen_Test-test1-Google-Chrome\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
 <system-out>
 <![CDATA[
-[[ATTACHMENT|test-results\1-Basics-4_Codegen_Test-test1-Google-Chrome\test-finished-1.png]]
+[[ATTACHMENT|test-results\1-Basics-4_Codegen_Test-test1-Google-Chrome\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\1-Basics-4_Codegen_Test-test1-Google-Chrome\error-context.md]]
+
+[[ATTACHMENT|test-results\1-Basics-4_Codegen_Test-test1-Google-Chrome\trace.zip]]
 ]]>
 </system-out>
 </testcase>
-<testcase name="test2 should fail" classname="1-Basics\4_Codegen_Test.spec.ts" time="49.698">
+<testcase name="test2 should fail" classname="1-Basics\4_Codegen_Test.spec.ts" time="48.741">
 <failure message="4_Codegen_Test.spec.ts:29:5 test2 should fail" type="FAILURE">
 <![CDATA[  [Google Chrome] › 1-Basics\4_Codegen_Test.spec.ts:29:5 › test2 should fail @PlaywrightWithJenkins 
 
-    Error: expect(locator).toContainText(expected) failed
-
-    Locator: getByRole('heading')
-    Expected substring: "Dash"
-    Received string:    "Login"
-    Timeout: 30000ms
-
+    TimeoutError: locator.click: Timeout 45000ms exceeded.
     Call log:
-      - Expect "toContainText" with timeout 30000ms
-      - waiting for getByRole('heading')
-        33 × locator resolved to <h5 data-v-7b563373="" data-v-0af708be="" class="oxd-text oxd-text--h5 orangehrm-login-title">Login</h5>
-           - unexpected value "Login"
+      - waiting for getByRole('link', { name: 'OrangeHRM' }).first()
 
 
+      33 |   await page.getByLabel('Search', { exact: true }).press('Enter');
+      34 |    // Click on link
+    > 35 |     await page.getByRole('link', { name: 'OrangeHRM' }).first().click();
+         |                                                                 ^
+      36 |   //await page.getByRole('link', { name: 'OrangeHRM OrangeHRM https://' }).click();
+      37 |   await expect(page.getByRole('heading', { name: 'Login' })).toBeVisible();
       38 |   await expect(page.getByText('Username', { exact: true })).toBeVisible();
-      39 |   await expect(page.getByText('Password', { exact: true })).toBeVisible();
-    > 40 |   await expect(page.getByRole('heading')).toContainText('Dash');
-         |                                           ^
-      41 | });
-        at C:\Users\XWZ\Desktop\Projects\Playwright-Typescript-New\tests\1-Basics\4_Codegen_Test.spec.ts:40:43
+        at C:\Users\XWZ\Desktop\Projects\Playwright-Typescript-New\tests\1-Basics\4_Codegen_Test.spec.ts:35:65
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ..\test-results\1-Basics-4_Codegen_Test-test2-should-fail-Google-Chrome\test-failed-1.png
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
     Error Context: ..\test-results\1-Basics-4_Codegen_Test-test2-should-fail-Google-Chrome\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\1-Basics-4_Codegen_Test-test2-should-fail-Google-Chrome\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\1-Basics-4_Codegen_Test-test2-should-fail-Google-Chrome\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
 ]]>
 </failure>
 <system-out>
@@ -44,6 +83,56 @@
 [[ATTACHMENT|test-results\1-Basics-4_Codegen_Test-test2-should-fail-Google-Chrome\test-failed-1.png]]
 
 [[ATTACHMENT|test-results\1-Basics-4_Codegen_Test-test2-should-fail-Google-Chrome\error-context.md]]
+
+[[ATTACHMENT|test-results\1-Basics-4_Codegen_Test-test2-should-fail-Google-Chrome\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="6-API Testing and Mocking\8_DELETE_API_Request.spec.ts" timestamp="2026-05-17T14:06:35.268Z" hostname="Google Chrome" tests="1" failures="0" skipped="0" time="1.414" errors="0">
+<testcase name="[10,11] Create DELETE API Request using playwright &amp; typescript" classname="6-API Testing and Mocking\8_DELETE_API_Request.spec.ts" time="1.414">
+<system-out>
+<![CDATA[POST API Response : {
+  "bookingid": 2658,
+  "booking": {
+    "firstname": "Santiago",
+    "lastname": "Purdy",
+    "totalprice": 7006,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2027-10-21",
+      "checkout": "2027-10-27"
+    },
+    "additionalneeds": "breakfast"
+  }
+}
+Booking Id : 2658
+GET API Response : {
+  "firstname": "Santiago",
+  "lastname": "Purdy",
+  "totalprice": 7006,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2027-10-21",
+    "checkout": "2027-10-27"
+  },
+  "additionalneeds": "breakfast"
+}
+Token : b9aa6d1275b0c51
+PATCH API Response : {
+  "firstname": "Kadi",
+  "lastname": "Purdy",
+  "totalprice": 7006,
+  "depositpaid": true,
+  "bookingdates": {
+    "checkin": "2027-10-21",
+    "checkout": "2027-10-27"
+  },
+  "additionalneeds": "breakfast"
+}
+DELETE API Response : Created
+
+[[ATTACHMENT|test-results\6-API Testing and Mocking--3d858-using-playwright-typescript-Google-Chrome\trace.zip]]
 ]]>
 </system-out>
 </testcase>
