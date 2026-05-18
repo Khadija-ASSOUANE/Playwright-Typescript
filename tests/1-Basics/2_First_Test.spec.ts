@@ -24,9 +24,7 @@
 // Import playwright module
 import { test, expect } from '@playwright/test';
 
-/**
- * khadija
- */
+
 test('My First Playwright TypeScript Test', async ({ page }) => {
     // Go to URL
     await page.goto('https://www.google.com/');
