@@ -20,9 +20,7 @@
 
 import { test, expect } from '@playwright/test';
 
-/**
- * khadija
- */
+
 test('test',  { tag: ['@PlaywrightWithAzureDevOpsPipeline','@PlaywrightWithGitHubActions'] },  async ({ page }) => {
 
   console.log('Test execution started...');
